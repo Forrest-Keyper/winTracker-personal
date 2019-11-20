@@ -1,23 +1,39 @@
-# user object
+# the basement will be our driving function
 class Tracker:
-    def __init__(self, game, numPlayers):
+    def __init__(self, name,  game):
         self.name = self
         self.gmae = game
         self.numPlayers = numPlayers
-        self.rules = []
+        self.rules = {}
         self.record = []
 
-        # function for adding fields to our tracker object
-        def trackerDefine():
-            rules.append(tracker)
-            return
+    # function for adding fields to our tracker object
+    def trackerDefine(tracker):
+        # define fields for tracker
+        trackerName = input("What would you like to name your tracker?")
+        tracker.rules['Tracker Name'] = trackerName
+        gameName = input("What game will you be tracking?")
+        tracker.rules['Game'] = gameName
+        print(tracker.rules)
+        return
 
-        def trackerAdd(user, tracker):
-            user.trackers.append()
-            return
+    def trackerAdd(user, tracker):
+        # add tracker to user's tracker array
+        user.trackers.append()
+        return
+
+
+def menu(choice):
+    if choice == U:
 
 
 
+testTracker = Tracker('Overwatch', 1)
+
+testTracker.trackerDefine()
+
+
+'''
 example user object
 
 
@@ -41,7 +57,6 @@ example user object
                 ,
                 ]
 }
-
 
 
 class User:
@@ -71,3 +86,13 @@ class User:
         # object for storing tracked data
 
         # state machine function, takes user input and
+'''
+
+running = True
+
+while running:
+    """
+    What would you like to do?
+    T to make a Tracker
+
+    """
